@@ -79,7 +79,3 @@ championship-tictactoe/
 5. Click **Next Round** between games, or **Start New Tournament** after a championship ends
 
 ---
-
-## 📄 License
-
-MIT License — free to use, modify, and distribute.
