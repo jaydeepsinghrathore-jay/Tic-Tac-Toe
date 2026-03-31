@@ -1,81 +1,67 @@
-# 🎮 Championship Tic-Tac-Toe
+# Championship Tic-Tac-Toe AI
+### *Fundamentals of AI and ML (CSA2001) Project*
 
-A sleek, dark-themed Tic-Tac-Toe game built with Python and Tkinter — featuring an unbeatable AI, three difficulty levels, and a **first-to-3-wins** championship format.
-
----
-
-## ✨ Features
-
-- **Championship Mode** — First player to win 3 rounds takes the tournament
-- **Three Difficulty Levels**
-  - `Easy` — AI plays randomly
-  - `Medium` — AI plays randomly (same as Easy; extendable)
-  - `Hard` — Unbeatable AI powered by the **Minimax algorithm**
-- **Live Scoreboard** — Tracks your wins vs. AI wins across rounds
-- **Clean Dark UI** — Google-inspired dark theme with smooth canvas rendering
-- **Instant Replay** — Start a new tournament without restarting the app
+Welcome to **Championship Tic-Tac-Toe**! This project moves beyond a simple 3x3 grid to create a professional "Best of Five" tournament experience. Built with Python, it features a custom-coded AI that uses logic to challenge the player at multiple difficulty levels.
 
 ---
 
-## 🖼️ Preview
-
-| Your turn | AI wins the round | Champion crowned |
-|-----------|-------------------|-----------------|
-| Blue `X` marks | Red `O` marks | Gold trophy header |
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.x
-- `tkinter` (included in the standard library for most Python installs)
-
-### Run the Game
-
-```bash
-git clone https://github.com/your-username/championship-tictactoe.git
-cd championship-tictactoe
-python tictactoe.py
-```
-
-> On some Linux systems, install Tkinter separately:
-> ```bash
-> sudo apt-get install python3-tk
-> ```
+## Project Details
+* **Author:** Jaydeep Singh Rathore
+* **Reg No:** 25BCE11117
+* **Subject:** Fundamentals of AI and ML (CSA2001)
+* **Faculty:** Dr. Vinesh Kumar
+* **Institution:** VIT Bhopal University
 
 ---
 
-## 🧠 How the AI Works
+## Key Features
 
-On **Hard** difficulty, the AI uses the **Minimax algorithm** — a recursive decision-tree search that evaluates every possible future game state and picks the optimal move. It is mathematically unbeatable; the best outcome against it is a draw.
-
-```
-AI win  → score: +10 (minus depth)
-AI loss → score: -10 (plus depth)
-Draw    → score: 0
-```
-
----
-
-## 🗂️ Project Structure
-
-```
-championship-tictactoe/
-│
-├── tictactoe.py   # All game logic and UI in a single file
-└── README.md
-```
+* **Championship Mode:** The game doesn't end in one round. It tracks scores across multiple games until a player reaches **3 wins** to become the ultimate champion.
+* **Dynamic AI Difficulty:**
+    * **Easy:** The AI picks moves randomly (great for a quick win).
+    * **Medium:** A mix of smart moves and human-like mistakes.
+    * **Hard:** Uses the **Minimax Algorithm** to play perfectly. On this mode, the AI cannot be defeated; it can only be drawn.
+* **Modern UI/UX:** A sleek "Dark Mode" interface using a #1A1C20 color palette to reduce eye strain and look professional.
+* **Interactive Canvas:** Instead of using basic buttons, symbols are drawn dynamically on a digital canvas for a smoother visual feel.
+* **Human-Like Interaction:** Includes a 400ms "thinking delay" for the AI, making the gameplay feel natural rather than instantaneous.
 
 ---
 
-## 🕹️ How to Play
+## The "Brain" of the AI: Minimax Logic
+The core intelligence of this project is the **Minimax Algorithm**, a recursive strategy used in game theory.
 
-1. Choose a difficulty — **Easy**, **Medium**, or **Hard**
-2. Click any cell to place your `X`
-3. The AI responds with `O`
-4. Win 3 rounds before the AI does to become **Champion**
-5. Click **Next Round** between games, or **Start New Tournament** after a championship ends
+1.  **Look-Ahead:** When it is the AI's turn, it simulates every possible move left on the board.
+2.  **Scoring:** It assigns a score to every outcome (+10 for an AI win, -10 for a human win).
+3.  **Optimal Choice:** It chooses the path that maximizes its own score while assuming the human player will try to minimize it.
+4.  **Efficiency:** I implemented **depth-weighted scoring**, meaning the AI prefers to win in 2 moves rather than 5 moves, making it a very aggressive opponent.
+
+---
+
+## Tech Stack
+* **Language:** Python 3.x
+* **GUI Library:** Tkinter (Standard Python Library)
+* **Logic:** Recursive Backtracking (Minimax)
+* **Math Utilities:** Standard Math & Random modules
+
+---
+
+## How to Run the Game
+
+1.  **Install Python:** Ensure you have Python 3 installed on your computer.
+2.  **Download Script:** Save the project code as `championship_ttt.py`.
+3.  **Run via Terminal:**
+    ```bash
+    python championship_ttt.py
+    ```
+4.  **Play:** Choose your difficulty and try to beat the AI to reach 3 wins!
+
+---
+
+## Reflections & Learning
+Through this project, I learned:
+* How to translate human intuition into mathematical logic.
+* How to manage "Game States" across multiple rounds (Tournament Logic).
+* The importance of UI delays to make an AI feel more "human."
+* The power of recursion in solving complex decision-making trees.
 
 ---
